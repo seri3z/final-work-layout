@@ -1,0 +1,36 @@
+@import 'core/Fonts';
+
+@import 'blocks/Header';
+@import 'blocks/Banners';
+@import 'blocks/ShopCards';
+@import 'blocks/CatalogCards';
+@import 'blocks/CollectionTitle';
+@import 'blocks/Footer';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a[class] {
+  text-decoration: none;
+  color: #242021;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Proxima Nova", serif;
+  color: #242021;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+button[class] {
+  font-family: "Proxima Nova", serif;
+}

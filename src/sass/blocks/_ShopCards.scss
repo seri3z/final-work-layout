@@ -1,0 +1,175 @@
+.shop-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
+  padding: 48px;
+
+  .shop-cards__title {
+    grid-column: 1/-1;
+    font-size: 54px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    .image {
+      width: auto;
+      height: 300px;
+      background-repeat: no-repeat;
+
+      .image {
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 300ms linear;
+      }
+
+      &:hover .image {
+        opacity: 1;
+      }
+    }
+
+    .description {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    .info {
+      margin-top: 18px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      >div:first-child {
+        width: 70%;
+        padding-right: 10%;
+      }
+
+      >div:last-child {
+        width: 30%;
+      }
+
+      .label {
+        font-weight: bold;
+        font-size: 20px;
+        color: #ECBD46;
+        text-transform: uppercase;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .author {
+        font-size: 18px;
+      }
+
+      .price {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: right;
+      }
+
+      .set {
+        font-size: 16px;
+        text-align: right;
+        text-transform: uppercase;
+        color: #b3b3b3;
+      }
+    }
+  }
+
+  .buttons {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 96px;
+
+    .button {
+      border-bottom: #242021 1px solid;
+      color: #242021;
+      font-size: 22px;
+      line-height: 2;
+      font-weight: bold;
+    }
+  }
+
+  .image-24 {background-image: url("../images/assets/asset%2024.webp");}
+  .image-25 {background-image: url("../images/assets/asset%2025.webp");}
+  .image-26 {background-image: url("../images/assets/asset%2026.webp");}
+  .image-27 {background-image: url("../images/assets/asset%2027.webp");}
+  .image-28 {background-image: url("../images/assets/asset%2028.webp");}
+  .image-29 {background-image: url("../images/assets/asset%2029.webp");}
+  .image-30 {background-image: url("../images/assets/asset%2030.webp");}
+  .image-31 {background-image: url("../images/assets/asset%2031.webp");}
+  .image-32 {background-image: url("../images/assets/asset%2032.webp");}
+  .image-33 {background-image: url("../images/assets/asset%2033.webp");}
+  .image-34 {background-image: url("../images/assets/asset%2034.webp");}
+  .image-35 {background-image: url("../images/assets/asset%2035.webp");}
+  .image-36 {background-image: url("../images/assets/asset%2036.webp");}
+  .image-37 {background-image: url("../images/assets/asset%2037.webp");}
+  .image-38 {background-image: url("../images/assets/asset%2038.webp");}
+  .image-39 {background-image: url("../images/assets/asset%2039.webp");}
+
+  .image-41 {background-image: url("../images/assets/asset%2041.webp");}
+  .image-42 {background-image: url("../images/assets/asset%2042.webp");}
+  .image-43 {background-image: url("../images/assets/asset%2043.webp");}
+  .image-44 {background-image: url("../images/assets/asset%2044.webp");}
+  .image-45 {background-image: url("../images/assets/asset%2045.webp");}
+  .image-46 {background-image: url("../images/assets/asset%2046.webp");}
+  .image-47 {background-image: url("../images/assets/asset%2047.webp");}
+  .image-48 {background-image: url("../images/assets/asset%2048.webp");}
+  .image-49 {background-image: url("../images/assets/asset%2049.webp");}
+  .image-50 {background-image: url("../images/assets/asset%2050.webp");}
+  .image-51 {background-image: url("../images/assets/asset%2051.webp");}
+  .image-52 {background-image: url("../images/assets/asset%2052.webp");}
+
+  .image-54 {background-image: url("../images/assets/asset%2054.webp");}
+  .image-55 {background-image: url("../images/assets/asset%2055.webp");}
+  .image-56 {background-image: url("../images/assets/asset%2056.webp");}
+  .image-57 {background-image: url("../images/assets/asset%2057.webp");}
+  .image-58 {background-image: url("../images/assets/asset%2058.webp");}
+  .image-59 {background-image: url("../images/assets/asset%2059.webp");}
+  .image-60 {background-image: url("../images/assets/asset%2060.webp");}
+  .image-61 {background-image: url("../images/assets/asset%2061.webp");}
+  .image-62 {background-image: url("../images/assets/asset%2062.webp");}
+  .image-63 {background-image: url("../images/assets/asset%2063.webp");}
+  .image-64 {background-image: url("../images/assets/asset%2064.webp");}
+  .image-65 {background-image: url("../images/assets/asset%2065.webp");}
+  .image-66 {background-image: url("../images/assets/asset%2066.webp");}
+  .image-67 {background-image: url("../images/assets/asset%2067.webp");}
+
+  .image-69 {background-image: url("../images/assets/asset%2069.webp");}
+  .image-70 {background-image: url("../images/assets/asset%2070.webp");}
+  .image-71 {background-image: url("../images/assets/asset%2071.webp");}
+  .image-72 {background-image: url("../images/assets/asset%2072.webp");}
+  .image-73 {background-image: url("../images/assets/asset%2073.webp");}
+  .image-74 {background-image: url("../images/assets/asset%2074.webp");}
+  .image-75 {background-image: url("../images/assets/asset%2075.webp");}
+  .image-76 {background-image: url("../images/assets/asset%2076.webp");}
+
+  .image-77 {background-image: url("../images/assets/asset%2077.webp");}
+  .image-78 {background-image: url("../images/assets/asset%2078.webp");}
+  .image-79 {background-image: url("../images/assets/asset%2079.webp");}
+  .image-80 {background-image: url("../images/assets/asset%2080.webp");}
+  .image-81 {background-image: url("../images/assets/asset%2081.webp");}
+  .image-82 {background-image: url("../images/assets/asset%2082.webp");}
+  .image-83 {background-image: url("../images/assets/asset%2083.webp");}
+  .image-84 {background-image: url("../images/assets/asset%2084.webp");}
+
+  .image-85 {background-image: url("../images/assets/asset%2085.webp");}
+  .image-86 {background-image: url("../images/assets/asset%2086.webp");}
+  .image-87 {background-image: url("../images/assets/asset%2087.webp");}
+  .image-88 {background-image: url("../images/assets/asset%2088.webp");}
+
+
+}

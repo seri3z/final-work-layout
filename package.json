@@ -1,0 +1,12 @@
+{
+  "name": "final-work-layout",
+  "version": "1.0.0",
+  "description": "Итоговое задание по вёрстке",
+  "scripts": {
+    "scss": "node-sass --watch src/sass -o public/stylesheets"
+  },
+  "author": "Oleg Putsilo",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

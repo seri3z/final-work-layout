@@ -1,0 +1,142 @@
+.header {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 170px;
+  z-index: 998;
+
+  .announcement {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    background-color: #d3994f;
+    transition: all 300ms linear;
+
+    &:hover {
+      background-color: #d9a767;
+    }
+  }
+
+  .header-content {
+    padding: 59px 55px 15px 55px;
+    display: flex;
+
+
+    .logo {
+      display: block;
+      padding: 15px 0;
+
+      img {
+        width: 100%;
+        max-width: 170px;
+        height: auto;
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      padding: 15px 26px;
+
+      .link {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 18px;
+        transition-property: color, fill;
+        transition-duration: 300ms;
+        transition-timing-function: linear;
+        color: #242021;
+        cursor: pointer;
+
+        span {
+          cursor: pointer;
+        }
+
+        &.link--dropdown {
+          outline: 0;
+          background-color: #ffffff;
+          border: 2px solid #ffffff;
+          border-radius: 4px;
+        }
+
+        &:hover, &:hover .icon {
+          color: #4d4446;
+          fill: #4d4446;
+        }
+
+        &.link--dropdown:focus {
+          border: 2px solid #005fcc;
+          color: #4d4446;
+          fill: #4d4446;
+        }
+
+
+
+        .icon {
+          display: inline-block;
+          height: 8px;
+          width: 8px;
+        }
+      }
+    }
+  }
+
+  .link--dropdown-menu {
+    display: none;
+
+    &:checked + .dropdown-menu {
+      display: flex;
+    }
+  }
+
+  .dropdown-menu {
+    position: fixed;
+    top: 170px;
+    left: 0;
+    display: none;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 11px 15px;
+    align-items: flex-start;
+    justify-content: center;
+
+    .dropdown-menu__picture {
+      width: 30%;
+      max-width: 300px;
+      padding: 0 0 32px 0;
+      margin: 0 24px;
+    }
+
+    .dropdown-menu__collections {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 30%;
+      max-width: 450px;
+      text-align: left;
+      margin: 0 24px;
+      padding: 0 0 32px 0;
+
+      .dropdown-menu__collection-title {
+        width: 100%;
+        font-weight: bold;
+        padding-bottom: 16px;
+      }
+
+      .dropdown-menu__collection-group {
+        width: 50%;
+        padding-bottom: 12px;
+      }
+
+      .dropdown-menu__collection-sale {
+        color: #ff0000;
+      }
+    }
+  }
+}

@@ -1,0 +1,250 @@
+.footer {
+  position: relative;
+  background-color: #f4f4f4;
+  display: grid;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+          "a1 b1 c1"
+          "d1 d1 e1";
+  padding: 80px 48px 32px 48px;
+  font-size: 16px;
+
+  .wave {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    fill: #f4f4f4;
+
+    &.wave--small {
+      display: none;
+    }
+
+    &.wave--large {
+      display: block;
+    }
+  }
+
+  .a1 {
+    grid-area: a1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+
+    .title {
+      font-size: 1.7em;
+      width: 100%;
+      font-weight: bold;
+      line-height: 1.25;
+      margin-bottom: 0.85em;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 64px;
+
+      .link {
+        display: inline-block;
+        font-size: 1.1em;
+        line-height: 1.5;
+        margin-bottom: 6px;
+        font-weight: normal;
+        transition: color 300ms linear;
+
+        &:hover {
+          color: #4b4244;
+        }
+      }
+    }
+  }
+
+  .b1 {
+    grid-area: b1;
+
+    .title {
+      font-size: 1.7em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    .input-group {
+      margin-top: 1em;
+      -webkit-font-smoothing: antialiased;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      color: #242021;
+      line-height: 1.5;
+      font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      list-style: none;
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .input-group__field {
+        list-style: none;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        font: inherit;
+        touch-action: manipulation;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        background-color: white;
+        color: black;
+        max-width: 100%;
+        line-height: 1.2;
+        padding: 10px 18px;
+        min-height: 46px;
+        flex-basis: 15rem;
+        flex-grow: 9999;
+        margin-bottom: 1rem;
+        border-radius: 0 0 0 0;
+        font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        border: none;
+        outline: 0;
+      }
+
+      .input-group__btn {
+        -webkit-font-smoothing: antialiased;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        color: #242021;
+        line-height: 1.5;
+        font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        list-style: none;
+        box-sizing: border-box;
+        flex-grow: 1;
+        margin-bottom: 1rem;
+
+        .btn {
+          list-style: none;
+          box-sizing: border-box;
+          -webkit-font-smoothing: antialiased;
+          font: inherit;
+          margin: 0;
+          touch-action: manipulation;
+          line-height: 1.5;
+          user-select: none;
+          appearance: none;
+          display: inline-block;
+          text-decoration: none;
+          text-align: center;
+          vertical-align: middle;
+          cursor: pointer;
+          border: 1px solid transparent;
+          background-color: #242021;
+          color: white;
+          font-style: normal;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          white-space: normal;
+          font-size: 16px;
+          transition: .3s;
+          padding: 10px 18px;
+          font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          min-height: 46px;
+          width: 100%;
+          border-radius: 0 0 0 0;
+
+          .newsletter__submit-text--large {
+            list-style: none;
+            -webkit-font-smoothing: antialiased;
+            font: inherit;
+            line-height: 1.5;
+            user-select: none;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            white-space: normal;
+            font-size: 16px;
+            font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+
+  .c1 {
+    grid-area: c1;
+    margin-left: 104px;
+
+    .title {
+      font-size: 1.7em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      line-height: 1.25;
+    }
+
+    .icons {
+      margin-bottom: 1.1em;
+    }
+
+    .text {
+      font-size: 1.1em;
+
+      .link {
+        display: inline-block;
+        color: #000000;
+        border-bottom: #000000 1px solid;
+        font-weight: bold;
+        transition: all 300ms linear;
+
+        &:hover {
+          color: #b3b3b3;
+          border-bottom: #b3b3b3 1px solid;
+        }
+      }
+    }
+  }
+
+  .d1 {
+    grid-area: d1;
+
+    .text {
+      line-height: 1;
+    }
+  }
+
+  .e1 {
+    grid-area: e1;
+    margin-left: 104px;
+  }
+
+  .text {
+    font-size: 1em;
+    padding-bottom: 0.8em;
+  }
+
+  .description {
+    color: #6d6d6f;
+    font-size: 0.8em;
+
+    .link {
+      display: inline-block;
+      color: #242021;
+      border-bottom: #242021 1px solid;
+      transition: all 300ms linear;
+
+      &:hover {
+        color: #b3b3b3;
+        border-bottom: #b3b3b3 1px solid;
+      }
+    }
+  }
+}
