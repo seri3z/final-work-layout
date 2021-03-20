@@ -173,13 +173,13 @@
       .header .dropdown-menu .dropdown-menu__collections .dropdown-menu__collection-sale {
         color: #ff0000; }
 
-.section-banners {
+.banners {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 2em;
   grid-row-gap: 2em;
   padding: 0 0 2em 0; }
-  .section-banners__banner {
+  .banners__banner {
     position: relative;
     grid-column: span 1;
     overflow: hidden;
@@ -188,117 +188,117 @@
     justify-content: center;
     height: 100%;
     max-height: 500px; }
-    .section-banners__banner--main {
+    .banners__banner--main {
       grid-column: span 2;
       max-height: 650px; }
 
-.banner-content__picture {
+.banner__picture {
   height: auto;
   width: 100%;
   object-fit: contain; }
-  .banner-content__picture--desktop {
+  .banner__picture--desktop {
     display: block; }
-  .banner-content__picture--mobile {
+  .banner__picture--mobile {
     display: none; }
 
-.banner-content__frame {
+.banner__frame {
   position: absolute;
   padding: 4em 2em; }
-  .banner-content__frame--main {
+  .banner__frame--main {
     top: 0;
     right: 0;
     text-align: right; }
-  .banner-content__frame--second {
+  .banner__frame--second {
     top: 0;
     left: 0;
     text-align: left; }
-  .banner-content__frame--third {
+  .banner__frame--third {
     bottom: 0;
     right: 0;
     text-align: right; }
 
-.banner-content__title {
+.banner__title {
   font-size: 1.5em;
   font-weight: bold;
   margin: 0 0 0.5em 0;
   color: #339bff; }
 
-.banner-content__button {
+.banner__button {
   display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
   transition: background-color 300ms linear;
   padding: 0.5em 1em; }
-  .banner-content__button--first {
+  .banner__button--first {
     background-color: #339bff; }
-    .banner-content:hover .banner-content__button--first {
+    .banner:hover .banner__button--first {
       background-color: #51b9ff; }
-  .banner-content__button--second {
+  .banner__button--second {
     background-color: #d780d6; }
-    .banner-content:hover .banner-content__button--second {
+    .banner:hover .banner__button--second {
       background-color: #f59ef4; }
-  .banner-content__button--third {
+  .banner__button--third {
     background-color: #34dc6b; }
-    .banner-content:hover .banner-content__button--third {
+    .banner:hover .banner__button--third {
       background-color: #52fa89; }
 
-.banner-content__wave {
+.banner__wave {
   width: 100%;
   margin: 2em 0 0 0; }
-  .banner-content__wave--mobile {
+  .banner__wave--mobile {
     display: none; }
 
 @media only screen and (max-width: 749px) {
-  .section-banners {
+  .banners {
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 0;
     padding: 0; }
-    .section-banners__banner {
+    .banners__banner {
       grid-column: span 1;
       max-height: 100%; }
-      .section-banners__banner--main {
+      .banners__banner--main {
         grid-column: span 1;
         max-height: 100%; }
-  .banner-content {
+  .banner {
     display: flex;
     flex-direction: column; }
-    .banner-content__picture {
+    .banner__picture {
       height: auto;
       width: 100%;
       object-fit: contain; }
-      .banner-content__picture--desktop {
+      .banner__picture--desktop {
         display: none; }
-      .banner-content__picture--mobile {
+      .banner__picture--mobile {
         display: block; }
-    .banner-content__frame {
+    .banner__frame {
       position: relative;
       padding: 2em 0 0 0; }
-      .banner-content__frame--main {
+      .banner__frame--main {
         text-align: center;
         padding: 1em 0 0 0; }
-      .banner-content__frame--second {
+      .banner__frame--second {
         text-align: center; }
-      .banner-content__frame--third {
+      .banner__frame--third {
         text-align: center; }
-    .banner-content__title {
+    .banner__title {
       margin: 0 0 0.5em 0;
       color: #242021; }
-    .banner-content__button--first {
+    .banner__button--first {
       background-color: #242021;
       color: white; }
-      .banner-content:hover .banner-content__button--first {
+      .banner:hover .banner__button--first {
         background-color: #242021; }
-    .banner-content__button--second {
+    .banner__button--second {
       background-color: #242021;
       color: white; }
-      .banner-content:hover .banner-content__button--second {
+      .banner:hover .banner__button--second {
         background-color: #242021; }
-    .banner-content__button--third {
+    .banner__button--third {
       background-color: #242021;
       color: white; }
-      .banner-content:hover .banner-content__button--third {
+      .banner:hover .banner__button--third {
         background-color: #242021; }
-    .banner-content__wave--mobile {
+    .banner__wave--mobile {
       display: block; } }
 
 .shop-cards {
