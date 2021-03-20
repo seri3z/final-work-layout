@@ -29,8 +29,9 @@ body {
   color: #242021;
   line-height: 1.5;
   font-size: 16px;
+  position: relative;
 }
 
-button[class] {
+input[class], button[class] {
   font-family: "Proxima Nova", serif;
 }

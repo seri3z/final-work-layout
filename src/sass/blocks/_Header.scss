@@ -1,14 +1,11 @@
 .header {
   background-color: #ffffff;
   position: fixed;
+  top: 0;
   width: 100%;
-  height: 170px;
   z-index: 998;
 
   .announcement {
-    position: absolute;
-    top: 0;
-    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,18 +20,18 @@
   }
 
   .header-content {
-    padding: 59px 55px 15px 55px;
+    padding: 32px 48px;
     display: flex;
-
 
     .logo {
       display: block;
-      padding: 15px 0;
+      align-items: center;
 
       img {
         width: 100%;
         max-width: 170px;
         height: auto;
+        padding: 5px 0 0 0;
       }
     }
 
@@ -42,7 +39,7 @@
       display: flex;
       flex-direction: row;
       align-items: flex-end;
-      padding: 15px 26px;
+      padding: 0 23px;
 
       .link {
         display: inline-block;
@@ -85,6 +82,67 @@
         }
       }
     }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 0 auto;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .buttons-title {
+        color: #b3b3b3;
+        font-size: 18px;
+        margin-bottom: 0.25em;
+      }
+
+      .buttons-panel {
+        display: flex;
+        flex-direction: row;
+
+        #search-button {
+          display: none;
+        }
+
+        #search-button:checked + .search-input {
+          width: 250px;
+          padding: 0 0 0 16px;
+        }
+
+        .search-input {
+          outline: 0;
+          border: 0;
+          border-bottom: black 1px solid;
+          font-size: 18px;
+          color: #b3b3b3;
+          margin: 0.25em -48px 0 0.25em;
+          padding: 0;
+          width: 0;
+          transition: width 150ms linear;
+        }
+
+        .button {
+          display: flex;
+          flex-direction: row;
+
+          .button__icon {
+            box-sizing: content-box;
+            width: 22px;
+            height: 23px;
+            padding: 0 3px 0 16px;
+            align-self: center;
+            justify-self: center;
+            background-color: #ffffff;
+          }
+
+          .button__label {
+            padding: 0.25em 0 0 0.25em;
+            font-size: 18px;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
   }
 
   .link--dropdown-menu {
@@ -96,8 +154,8 @@
   }
 
   .dropdown-menu {
-    position: fixed;
-    top: 170px;
+    position: absolute;
+    margin: 32px 0 0 0;
     left: 0;
     display: none;
     background-color: #ffffff;
