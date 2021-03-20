@@ -1,6 +1,8 @@
 @import '../utils/variables';
 
 .banners {
+  width: 100%;
+  max-width: 1550px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 2em;

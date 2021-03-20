@@ -1,8 +1,11 @@
 @import 'core/Fonts';
 
 @import 'blocks/Header';
-@import 'blocks/Banners';
-@import 'blocks/ShopCards';
+@import 'blocks/banners';
+@import 'blocks/showcase';
+@import 'blocks/catalog';
+@import 'blocks/advantages';
+
 @import 'blocks/CatalogCards';
 @import 'blocks/CollectionTitle';
 @import 'blocks/Footer';
@@ -27,6 +30,9 @@ body {
   line-height: 1.5;
   font-size: 18px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a[class], input[class], button[class] {

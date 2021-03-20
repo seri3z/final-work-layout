@@ -1,0 +1,174 @@
+.showcase {
+  width: 100%;
+  max-width: 1550px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-column-gap: 3em;
+  grid-row-gap: 3em;
+  padding: 2em;
+
+  @media only screen and (max-width: 749px) {
+    & {
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+  }
+
+  &__title {
+    grid-column: span 4;
+    font-size: 300%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+
+    @media only screen and (max-width: 749px) {
+      & {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &__card {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    grid-column: span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6em;
+
+    @media only screen and (max-width: 749px) {
+      & {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+.card {
+
+  &__image {
+    position: relative;
+  }
+
+  &__info {
+    margin-top: 0.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 120%;
+
+    @media only screen and (max-width: 989px) {
+      & {
+        flex-direction: column;
+        font-size: 100%;
+      }
+    }
+  }
+}
+
+.image {
+
+  &__back {
+    height: auto;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: 50% 50%;
+  }
+
+  &__front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: 50% 50%;
+    opacity: 0;
+    transition: opacity 300ms linear;
+
+    .card:hover & {
+      opacity: 1;
+    }
+  }
+}
+
+.info {
+
+  &__frame {
+
+    &--first {
+      flex-grow: 1;
+
+      @media only screen and (max-width: 989px) {
+        & {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+    }
+
+    &--second {
+      width: 30%;
+      margin: 0 0 0 auto;
+
+      @media only screen and (max-width: 989px) {
+        & {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+        }
+      }
+    }
+  }
+
+  &__label {
+    font-weight: bold;
+    color: #ECBD46;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__author {
+    padding: 0.5em 0 0.5em 0;
+    line-height: 1.2;
+  }
+
+  &__price {
+    font-weight: bold;
+    text-align: right;
+  }
+
+  &__set {
+    font-size: 80%;
+    text-align: right;
+    text-transform: uppercase;
+    color: #b3b3b3;
+
+    @media only screen and (max-width: 989px) {
+      & {
+        text-align: left;
+        padding: 0 0 0 0.5em;
+      }
+    }
+  }
+}
+
+.link {
+
+  &__button {
+    border-bottom: #242021 1px solid;
+    color: #242021;
+    font-size: 120%;
+    line-height: 200%;
+    font-weight: bold;
+  }
+}
