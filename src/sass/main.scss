@@ -7,6 +7,8 @@
 @import 'blocks/CollectionTitle';
 @import 'blocks/Footer';
 
+@import 'utils/variables';
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -18,20 +20,23 @@ a[class] {
   color: #242021;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-}
-
 body {
   font-family: "Proxima Nova", serif;
+  -webkit-font-smoothing: antialiased;
   color: #242021;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
 }
 
-input[class], button[class] {
+a[class], input[class], button[class] {
   font-family: "Proxima Nova", serif;
 }
+
+/*
+@media (max-width: 1550px) {}
+@media only screen and (max-width: 989px) {}
+@media only screen and (max-width: 749px) {}
+@media screen and (max-width: 490px) {}
+@media (max-width :400px) {}
+*/
