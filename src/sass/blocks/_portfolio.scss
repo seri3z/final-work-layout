@@ -1,0 +1,42 @@
+.portfolio {
+  position: relative;
+  padding: 96px 0 0 0;
+
+  &__wave {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $blue-light-2;
+    fill: $white;
+
+    &--small {
+      display: none;
+
+      @media (max-width: 749px) {
+        display: block;
+      }
+    }
+
+    &--large {
+      display: block;
+
+      @media (max-width: 749px) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0 0 0 48px;
+
+    > span {
+      color: $purple-2;
+    }
+  }
+}
+
+
