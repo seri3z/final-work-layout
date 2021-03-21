@@ -5,196 +5,297 @@
   width: 100%;
   z-index: 998;
 
-  .announcement {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__frame {
     width: 100%;
-    height: 44px;
-    background-color: #d3994f;
-    transition: all 300ms linear;
-
-    &:hover {
-      background-color: #d9a767;
-    }
-  }
-
-  .header-content {
+    max-width: 1550px;
     padding: 32px 48px;
     display: flex;
 
-    .logo {
-      display: block;
-      align-items: center;
-
-      img {
-        width: 100%;
-        max-width: 170px;
-        height: auto;
-        padding: 5px 0 0 0;
-      }
-    }
-
-    .menu {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      padding: 0 23px;
-
-      .link {
-        display: inline-block;
-        padding: 5px 10px;
-        font-size: 18px;
-        transition-property: color, fill;
-        transition-duration: 300ms;
-        transition-timing-function: linear;
-        color: #242021;
-        cursor: pointer;
-
-        span {
-          cursor: pointer;
-        }
-
-        &.link--dropdown {
-          outline: 0;
-          background-color: #ffffff;
-          border: 2px solid #ffffff;
-          border-radius: 4px;
-        }
-
-        &:hover, &:hover .icon {
-          color: #4d4446;
-          fill: #4d4446;
-        }
-
-        &.link--dropdown:focus {
-          border: 2px solid #005fcc;
-          color: #4d4446;
-          fill: #4d4446;
-        }
-
-
-
-        .icon {
-          display: inline-block;
-          height: 8px;
-          width: 8px;
-        }
-      }
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      margin: 0 0 0 auto;
-      justify-content: space-between;
-      align-items: flex-end;
-
-      .buttons-title {
-        color: #b3b3b3;
-        font-size: 18px;
-        margin-bottom: 0.25em;
-      }
-
-      .buttons-panel {
-        display: flex;
-        flex-direction: row;
-
-        #search-button {
-          display: none;
-        }
-
-        #search-button:checked + .search-input {
-          width: 250px;
-          padding: 0 0 0 16px;
-        }
-
-        .search-input {
-          outline: 0;
-          border: 0;
-          border-bottom: black 1px solid;
-          font-size: 18px;
-          color: #b3b3b3;
-          margin: 0.25em -48px 0 0.25em;
-          padding: 0;
-          width: 0;
-          transition: width 150ms linear;
-        }
-
-        .button {
-          display: flex;
-          flex-direction: row;
-
-          .button__icon {
-            box-sizing: content-box;
-            width: 22px;
-            height: 23px;
-            padding: 0 3px 0 16px;
-            align-self: center;
-            justify-self: center;
-            background-color: #ffffff;
-          }
-
-          .button__label {
-            padding: 0.25em 0 0 0.25em;
-            font-size: 18px;
-            background-color: #ffffff;
-          }
-        }
-      }
+    @media (max-width: 749px) {
+      padding: 15px 22px 10px 22px;
     }
   }
 
-  .link--dropdown-menu {
-    display: none;
-
-    &:checked + .dropdown-menu {
-      display: flex;
-    }
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    margin: 32px 0 0 0;
-    left: 0;
-    display: none;
-    background-color: #ffffff;
+  &__logo {
+    height: auto;
     width: 100%;
-    padding: 11px 15px;
-    align-items: flex-start;
-    justify-content: center;
+    max-width: 170px;
 
-    .dropdown-menu__picture {
-      width: 30%;
-      max-width: 300px;
-      padding: 0 0 32px 0;
-      margin: 0 24px;
+    @media (max-width: 999px) {
+      max-width: 90px;
     }
 
-    .dropdown-menu__collections {
+    @media (max-width: 869px) {
+      padding: 16px 0;
+    }
+
+    @media (max-width: 749px) {
+      max-width: 154px;
+      padding: 0;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    color: $gray-light;
+
+    @media (max-width: 999px) {
+      top: 16px;
+    }
+
+    @media (max-width: 869px) {
+      width: 150px;
+      text-align: right;
+    }
+
+    @media (max-width: 749px) {
+      display: none;
+    }
+  }
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 42px;
+  align-self: flex-end;
+
+  @media (max-width: 869px) {
+    align-self: center;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  @media (max-width: 749px) {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -48px;
+    background-color: $white;
+    flex-wrap: nowrap;
+    line-height: 48px;
+    width: 100%;
+
+    input:checked + & {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 30%;
-      max-width: 450px;
-      text-align: left;
-      margin: 0 24px;
-      padding: 0 0 32px 0;
+    }
+  }
 
-      .dropdown-menu__collection-title {
-        width: 100%;
-        font-weight: bold;
-        padding-bottom: 16px;
-      }
+  &__link {
+    margin: 0 24px 0 0;
+    transition-property: color, fill;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+    cursor: pointer;
 
-      .dropdown-menu__collection-group {
-        width: 50%;
-        padding-bottom: 12px;
-      }
+    &:hover {
+      color: $gray;
+      fill: $gray;
+    }
+  }
 
-      .dropdown-menu__collection-sale {
-        color: #ff0000;
+  &__link:last-child  {
+    margin: 0;
+  }
+}
+
+.header-dropdown-menu {
+  position: absolute;
+  display: none;
+  left: 0;
+  margin: 32px 0 0 0;
+  padding: 0 146px 32px 146px;
+  background-color: $white;
+  justify-content: center;
+
+  @media (max-width: 749px) {
+    padding: 0 32px 32px 32px;
+    margin: 0;
+  }
+
+  input:checked + & {
+    display: flex;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+
+  &__frame {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    margin: 0 32px 0 0;
+
+    @media (max-width: 999px) {
+      width: 50%;
+    }
+
+    @media (max-width: 749px) {
+      margin: 0 8px 0 0;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__picture {
+    width: 30%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin: 0 32px 0 0;
+
+    @media (max-width: 999px) {
+      display: none;
+    }
+  }
+
+  &__group {
+    width: 100%;
+    font-weight: bold;
+    margin: 0 0 18px 0;
+    transition: .3s;
+
+    @media (max-width: 749px) {
+      margin: 0 0 9px 0;
+      line-height: 32px;
+    }
+
+    &:hover {
+      color: $gray;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 50%;
+    margin: 0 0 9px 0;
+    transition: .3s;
+
+    @media (max-width: 749px) {
+      margin: 0 0 3px 0;
+      line-height: 32px;
+    }
+
+    &:hover {
+      color: $gray;
+    }
+
+    &--sale {
+      color: $red;
+
+      &:hover {
+        color: $red;
       }
     }
   }
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 auto;
+  justify-content: flex-end;
+  align-self: flex-end;
+
+  @media (max-width: 749px) {
+    align-self: center;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+
+  &__icon {
+    box-sizing: content-box;
+    width: 22px;
+    height: 23px;
+    padding: 0 3px 0 16px;
+    align-self: center;
+    justify-self: center;
+    background-color: #ffffff;
+    transition: .3s;
+
+    &--hidden-lg {
+      display: none;
+
+      @media (max-width: 749px) {
+        display: block;
+      }
+    }
+
+    .header-buttons__button:hover & {
+      fill: $gray;
+    }
+  }
+
+  &__label {
+    padding: 0.25em 0 0 0.25em;
+    font-size: 18px;
+    background-color: #ffffff;
+    transition: .3s;
+
+    @media (max-width: 999px) {
+      display: none;
+    }
+
+    .header-buttons__button:hover & {
+      color: $gray;
+    }
+  }
+
+  &__search-input {
+    outline: 0;
+    border: 0;
+    border-bottom: black 1px solid;
+    font-size: 18px;
+    color: #b3b3b3;
+    margin: 0.25em -48px 0 0.25em;
+    padding: 0;
+    width: 0;
+    transition: width 150ms linear;
+
+    @media (max-width: 869px) {
+      position: absolute;
+      top: 0;
+      right: 48px;
+      font-size: 24px;
+    }
+
+    input:checked + & {
+      width: 250px;
+      padding: 0 0 0 16px;
+
+      @media (max-width: 869px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+/// Разное
+.icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+}
+
+.hidden {
+  display: none;
 }
