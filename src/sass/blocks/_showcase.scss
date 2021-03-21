@@ -5,7 +5,7 @@
   grid-template-columns: repeat(4, minmax(100px, 1fr));
   grid-column-gap: 3em;
   grid-row-gap: 3em;
-  padding: 2em;
+  padding: 4em 2em;
 
   @media only screen and (max-width: 749px) {
     & {
@@ -48,7 +48,7 @@
   }
 }
 
-.card {
+.showcase-card {
 
   &__image {
     position: relative;
@@ -70,7 +70,7 @@
   }
 }
 
-.image {
+.showcase-image {
 
   &__back {
     height: auto;
@@ -90,13 +90,13 @@
     opacity: 0;
     transition: opacity 300ms linear;
 
-    .card:hover & {
+    .showcase-card:hover & {
       opacity: 1;
     }
   }
 }
 
-.info {
+.showcase-info {
 
   &__frame {
 
@@ -162,7 +162,7 @@
   }
 }
 
-.link {
+.showcase-link {
 
   &__button {
     border-bottom: #242021 1px solid;

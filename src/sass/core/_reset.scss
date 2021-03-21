@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #242021;
+}
+
+body {
+  font-family: "Proxima Nova", serif;
+  -webkit-font-smoothing: antialiased;
+  color: #242021;
+  line-height: 1.5;
+  font-size: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a, input, button {
+  font-family: "Proxima Nova", serif;
+}
