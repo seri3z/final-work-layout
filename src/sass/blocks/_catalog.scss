@@ -7,7 +7,7 @@
   grid-row-gap: 1.5em;
   padding: 4em 0;
 
-  @media only screen and (max-width: 749px) {
+  @media (max-width: 749px) {
     & {
       grid-template-columns: 1fr;
       grid-column-gap: 0;
@@ -19,13 +19,13 @@
     height: 475px;
     overflow: hidden;
 
-    @media only screen and (max-width: 989px) {
+    @media (max-width: 989px) {
       & {
         height: 350px;
       }
     }
 
-    @media only screen and (max-width: 749px) {
+    @media (max-width: 749px) {
       & {
         display: flex;
         flex-direction: column;
@@ -51,7 +51,7 @@
     font-size: 125%;
     font-weight: bold;
 
-    @media only screen and (max-width: 749px) {
+    @media (max-width: 749px) {
       &--mobile {
         position: relative;
         text-align: center;
@@ -61,7 +61,7 @@
       }
     }
 
-    @media only screen and (min-width: 749px) {
+    @media (min-width: 749px) {
 
       &--first {
         color: #0f475b;
@@ -132,7 +132,7 @@
     &--mobile {
       display: none;
 
-      @media only screen and (max-width: 749px) {
+      @media (max-width: 749px) {
         & {
           display: block;
         }
